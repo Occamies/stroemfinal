@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Variables */
+
+$main-color: rgb(255, 102, 0);
+$bg-blue: rgb(52, 52, 79);
+
+/* reuseable */
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+
+
+h2 {
+  font-size: 2rem;
+}
+
+.btn {
+  background-color: $main-color;
+  color: white;
+  padding:1rem 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+ display: inline-block;
+}
+
+.btn:hover {
+  background-color: rgba(255, 102, 0, 0.25);
+  border: 2px solid $main-color;
+  color: $main-color;
+}
+
+/* Header */
+
+.header-container {
+  background-color: $bg-blue;
+  color: white;
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10vw;
+    padding: 20px 0 10vh;
+  }
+
+  .info-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .info-data {
+    display: flex;
+    gap: 0.3rem;
+  }
+  .header-icon {
+    color: darkorange;
+  }
+}
+
+/* NavBar */
+
+.nav-container {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  padding: 2rem;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 75%;
+  z-index: 1;
+  a {
+    color: black;
+    width: max-content;
+    display: inline-block;
+  }
+
+  .main-nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      
+      gap: 20%;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Hero */
+
+.slider {
+  width: 100%;
+  position: relative;
+  color: white;
+
+  .hero-text {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    span {
+      font-size: 6rem;
+      display: block;
+    }
+  }
+
+  .cover {
+    opacity: .5;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+/* Limt om strøm */
+
+.about-container {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  padding: 10vh 0;
+  p {
+    font-size: 1.2rem;
+    color: rgb(45, 45, 45);
+    padding: 1rem 0 3rem;
+  }
+}
+
+/* Need Help */
+
+.need-help-con {
+  background-color: $bg-blue;
+  text-align: center;
+  color: white;
+  padding: 5vh;
+  p {
+    font-size: 1.5rem;
+    padding: 1rem 0 3rem;
+  }
+
+  span {
+    color: $main-color;
+  }
+}
+
+/* Vores Services */
+
+.service-con {
+  width: 75%;
+  margin: auto;
+}
+
+.vores-service-container {
+  display: flex;
+
+  .service-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .showservice-card {
+    display: flex;
+    width: auto;
+  }
+}
+
