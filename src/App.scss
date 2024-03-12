@@ -22,6 +22,12 @@ li {
 h2 {
   font-size: 2rem;
 }
+h3 {
+  font-size: 1.9rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
 
 .btn {
   background-color: $main-color;
@@ -172,7 +178,11 @@ h2 {
 
 .service-con {
   width: 75%;
-  margin: auto;
+  margin: 10vh auto 0;
+
+  span {
+    color: $main-color;
+  }
 }
 
 .vores-service-container {
@@ -181,7 +191,8 @@ h2 {
   .service-con {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: min-content;
+    gap: 10vh;
   }
 
   .showservice-card {
