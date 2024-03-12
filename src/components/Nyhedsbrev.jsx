@@ -1,6 +1,6 @@
 import Error from '../components/Error';
 import Loader from "../components/Loader"
-import React, { useEffect } from "react"
+import React from "react"
 import useRequestData from "../hooks/useRequestData"
 
 

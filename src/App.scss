@@ -285,3 +285,23 @@ h5 {
   }
 }
 
+/* book service nu */
+.addBooking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 12.5%;
+  span {
+    display: block;
+    color: $main-color;
+  }
+  h4 {
+    display: block;
+  }
+  input {
+    padding: 1rem;
+  }
+  .btn {
+    padding: .5rem 2rem;
+  }
+}
