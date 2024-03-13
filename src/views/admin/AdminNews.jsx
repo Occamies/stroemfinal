@@ -25,12 +25,12 @@ const AdminNews = () => {
 
   const handleDelete = (ID, title) => {
 
-    console.log("Service der skal slettes: " + ID)
+    console.log("Nyhed der skal slettes: " + ID)
 
     if (window.confirm("Er du sikker på at du vil slette services: " + title)) {
 
       // Call to API - delete product
-      makeRequestDelete("http://localhost:5333/news" + ID, { "Content-Type": "multipart/form-data" }, null, "DELETE")
+      makeRequestDelete("http://localhost:5333/news/admin/" + ID, { "Content-Type": "multipart/form-data" }, null, "DELETE")
 
     }
   }
@@ -63,18 +63,17 @@ const AdminNews = () => {
 
         <tbody>
           {
-            data && data.map(p =>
+            data && data.map(item =>
 
-              <tr key={p._id} className="admin-tr">
-                <td>{p.title}</td>
-                <td> <img src={`http://localhost:5039/images/product/${p.productimage}`} alt={p.title} /></td>
+              <tr key={item._id} className="admin-tr">
+                <td className="admin-td">{item.title} <img src={`http://localhost:5333/images/news/${item.image}`} alt={item.title} className="admin-img" /></td>
                 <td>
 
 
-                  <Link to={"/admin/adminedit/" + p._id} > {/* change link */}
-                    <AiFillEdit size="2em" color="darkgreen" className="pointer" />
+                  <Link to={"/Admin/AdminEdit/" + item._id} >
+                    <AiFillEdit size="2em" color="green" className="pointer" />
                   </Link>
-                  <AiFillDelete onClick={() => handleDelete(p._id, p.title)} size="2em" className="pointer" />
+                  <AiFillDelete onClick={() => handleDelete(item._id, item.title)} size="2em" className="pointer" />
 
 
                 </td>

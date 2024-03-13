@@ -7,12 +7,12 @@ const NavBar = () => {
     <section className='nav-container'>
     <nav className='main-nav'>
       <ul>
-        <li><NavLink>Forside</NavLink></li>
-        <li><NavLink>Om os</NavLink></li>
-        <li><NavLink>Service</NavLink></li>
-        <li><NavLink>FAQ</NavLink></li>
-        <li><NavLink>Nyheder</NavLink></li>
-        <li><NavLink>Kontakt os</NavLink></li>
+        <li><NavLink to="/">Forside</NavLink></li>
+        <li><NavLink to="/OmOs">Om os</NavLink></li>
+        <li><NavLink to="/Services">Service</NavLink></li>
+        <li><NavLink to="/FAQ">FAQ</NavLink></li>
+        <li><NavLink to="/Nyheder">Nyheder</NavLink></li>
+        <li><NavLink to="/Kontakt os">Kontakt os</NavLink></li>
       </ul>
     </nav >
     <div className="searchbar">

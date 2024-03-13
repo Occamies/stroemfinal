@@ -457,3 +457,23 @@ h5 {
 .menu-nav {
   display: flex;
 }
+
+.admin-tr {
+  td {
+    margin-top: 2rem;
+  }
+}
+
+.admin-home-container {
+  margin: 0 12.5%;
+  text-align: center;
+}
+.admin-td {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.admin-img {
+  height: 20vh;
+}
