@@ -3,6 +3,11 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './layout/Layout'
 import FrontPage from './views/FrontPage';
 import NotFound from './views/NotFound';
+import AdminHome from './views/admin/AdminHome';
+import AdminLayout from './layout/admin/AdminLayout';
+import AdminNews from './views/admin/AdminNews';
+
+
 
 function App() {
 
@@ -16,6 +21,11 @@ function App() {
       </Route>
 
       {/* ADMIN */}
+
+      <Route path='/Admin' element={<AdminLayout/>}>
+        <Route index element={<AdminHome/>} />
+        <Route path='/Admin/AdminNews' element={ <AdminNews />} />
+      </Route>
 
       </>
     )
