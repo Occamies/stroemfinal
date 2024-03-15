@@ -21,7 +21,7 @@ const NavBar = () => {
         </div>
         <ul className={`menu-links ${showMenu ? "active" : ""}`}>
           <li><NavLink to="/">Forside</NavLink></li>
-          <li><NavLink to="/OmOs">Om os</NavLink></li>
+          <li><NavLink to="/About">Om os</NavLink></li>
           <li><NavLink to="/Services">Service</NavLink></li>
           <li><NavLink to="/FAQ">FAQ</NavLink></li>
           <li><NavLink to="/News">Nyheder</NavLink></li>

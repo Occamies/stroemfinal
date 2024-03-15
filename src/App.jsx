@@ -11,6 +11,10 @@ import AdminEdit from './views/admin/AdminEdit';
 import NewsSubpage from './views/NewsSubpage';
 import NewsPage from './views/NewsPage';
 import SearchFile from './layout/SearchFile';
+import OmOs from './views/OmOs';
+import Service from './views/Service';
+import AdminService from './views/admin/AdminService';
+import AdminServiceEdit from './views/admin/AdminServiceEdit';
 
 
 
@@ -25,6 +29,8 @@ function App() {
         <Route path='/News/NewsSubpage/:ID' element={<NewsSubpage/>} />
         <Route path='/News/Search/:ID' element={<SearchFile/>} />
         <Route path='/News' element={<NewsPage/>} />
+        <Route path='/About' element={<OmOs/>} />
+        <Route path='/Services' element={<Service/>} />
         <Route path='*' element={<NotFound/>} />
       </Route>
 
@@ -33,8 +39,10 @@ function App() {
       <Route path='/Admin' element={<AdminLayout/>}>
         <Route index element={<AdminHome/>} />
         <Route path='/Admin/AdminNews' element={ <AdminNews />} />
+        <Route path='/Admin/AdminService' element={ <AdminService />} />
         <Route path='/Admin/AdminCreate' element={ <AdminCreate />} />
         <Route path='/Admin/AdminEdit/:ID' element={ <AdminEdit />} />
+        <Route path='/Admin/AdminServiceEdit/:ID' element={ <AdminServiceEdit />} />
       </Route>
 
       </>

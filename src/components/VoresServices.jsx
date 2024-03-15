@@ -3,6 +3,7 @@ import Loader from "../components/Loader"
 import React, { useEffect } from "react"
 import useRequestData from "../hooks/useRequestData"
 import '../Fonts/_flaticon.scss'
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,13 +28,13 @@ const VoresService = () => {
 
           {data &&
             data.map((item, index) => (
-              <div className="showservice-card">
+              <Link to="/Services" className="showservice-card">
                 <i className={item.icon + ' fi service-icon'}  ></i>
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.teaser}</p>
                 </div>
-              </div>
+              </Link>
             ))
           }
         </section>
