@@ -27,7 +27,7 @@ const AdminServiceEdit = () => {
   useEffect(() => {
     if (dataPut && dataPut.rettet) {
       //leaves site after succes
-      navigate("/admin/AdminNews")
+      navigate("/admin/AdminService")
     } else {
       makeRequest('http://localhost:5333/service/' + ID)
     }
@@ -53,11 +53,11 @@ const AdminServiceEdit = () => {
       {(error || errorPut) && <Error />}
 
       {data &&
-        <form onSubmit={handleSubmit} ref={refForm}>
+        <form className="admin-textarea" onSubmit={handleSubmit} ref={refForm}>
 
           {/* Titel ... evt. med ref={ refInputTitel } */}
           <input type="text" name="title" defaultValue={data.title} placeholder="Skriv en titel" required className="form-control" />
-
+          <p>Content tekst</p>
           {/* Indhold */}
           <ReactQuill
             theme="snow"
@@ -67,12 +67,17 @@ const AdminServiceEdit = () => {
             placeholder="Service Content (formateret)"
             modules={{ toolbar: toolbarOptions }}
           />
-          
+          <p>Teaser tekst</p>
+        
+          <textarea rows="2" name="teaser" placeholder="Skriv Teaser" required defaultValue={data.teaser} maxlength="300"/>
+          <p>flaticon</p>
+          <input type="text" name="icon" placeholder="Skriv et flaticon navn" required defaultValue={data.icon}/>
+
           <p className="img-now">Nuværende billede: <img src={`http://localhost:5333/images/service/${data.image}`} width="100" /></p>
           <p>new image</p>
           <input type="file" name="image" className="form-control" />
 
-          <button type="submit">Edit Product</button>
+          <button type="submit">Edit Service</button>
         </form>
 
       }

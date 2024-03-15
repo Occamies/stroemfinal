@@ -49,7 +49,7 @@ const AdminService = () => {
             <th></th>
             <th></th>
             <th>
-              <Link to="/admin/adminCreate">
+              <Link to="/Admin/AdminServiceCreate">
                 <AiFillPlusCircle />  Opret ny
               </Link>
             </th>

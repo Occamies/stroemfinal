@@ -47,33 +47,42 @@ const AdminServiceCreate = () => {
   }
 
   return (
-    <section className='create-container'>
-      <h1>Ny Service</h1>
+    <section className="create-container">
+      <h1>Create Service</h1>
+
       {isLoading && <Loader />}
       {error && <Error />}
+
       {
         data && <article>{data.title} is created with ID: {data._id}</article>
       }
 
-      <form onSubmit={handleSubmit} ref={refForm}>
-        <input type="text" name="title" placeholder="Write a title" required />
+        <form className="admin-textarea" onSubmit={handleSubmit} ref={refForm}>
 
-        <ReactQuill
-          theme="snow"
-          onChange={setQuillContent}
-          value={quillContent}
-          placeholder="Lang produktbeskrivelse (formateret)"
-          modules={{ toolbar: toolbarOptions }}
-          required
-        />
+          <input type="text" name="title"  placeholder="Skriv en titel" required className="form-control" />
+          
+          <p>Content tekst</p>
+          <ReactQuill
+            theme="snow"
+            onChange={setQuillContent}
+            value={quillContent}
+            placeholder="Lang produktbeskrivelse (formateret)"
+            modules={{ toolbar: toolbarOptions }}
+            required
+          />
+          <p>Teaser tekst</p>
 
-        <input type="file" name="image" onChange={e => makeThumb(e.target.files[0])} required className="form-control" />
-        {
-          thumbImage && thumbImage
-        }
+          <textarea rows="2" name="teaser" placeholder="Skriv Teaser" required maxlength="300" />
+          <p>flaticon</p>
+          <input type="text" name="icon" placeholder="Skriv et flaticon navn" required />
 
-        <button type="submit">Opret Service</button>
-      </form>
+          <input type="file" name="image" onChange={e => makeThumb(e.target.files[0])} required className="form-control" />
+          {
+            thumbImage && thumbImage
+          }
+
+          <button type="submit">create Service</button>
+        </form>
 
 
     </section>

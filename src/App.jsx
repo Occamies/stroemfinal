@@ -15,6 +15,7 @@ import OmOs from './views/OmOs';
 import Service from './views/Service';
 import AdminService from './views/admin/AdminService';
 import AdminServiceEdit from './views/admin/AdminServiceEdit';
+import AdminServiceCreate from './views/admin/AdminServiceCreate';
 
 
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/Admin/AdminNews' element={ <AdminNews />} />
         <Route path='/Admin/AdminService' element={ <AdminService />} />
         <Route path='/Admin/AdminCreate' element={ <AdminCreate />} />
+        <Route path='/Admin/AdminServiceCreate' element={ <AdminServiceCreate />} />
         <Route path='/Admin/AdminEdit/:ID' element={ <AdminEdit />} />
         <Route path='/Admin/AdminServiceEdit/:ID' element={ <AdminServiceEdit />} />
       </Route>

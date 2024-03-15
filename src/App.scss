@@ -531,6 +531,20 @@ h5 {
   }
 }
 
+.admin-textarea {
+  display: flex;
+  flex-direction: column;
+  textarea {
+    width: 50%;
+  }
+  input {
+    width: 50%;
+  }
+  button {
+    width: 20%;
+  }
+}
+
 
 /* News Subpage */
 
