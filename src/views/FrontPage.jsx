@@ -20,7 +20,6 @@ const FrontPage = ()=> {
     <VoresKunder/>
     <VoresTeam />
     <SidsteNyt/>
-    
     </>
   )
 }

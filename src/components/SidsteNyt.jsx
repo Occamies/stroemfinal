@@ -25,7 +25,7 @@ const SidsteNyt = () => {
       <div className="news-card-con">
         {data &&
           data.slice(0, 3).map((item, index) => (
-            <NavLink className="news-card">
+            <NavLink to={"/News/NewsSubpage/"+item._id} className="news-card">
               <div className='news-date'>DATE</div>
               <img src={`http://localhost:5333/images/news/${item.image}`} alt={item.image} />
 

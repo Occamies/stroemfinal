@@ -11,6 +11,8 @@ const VoresKunder = () => {
 
   const { data, isLoading, error, makeRequest } = useRequestData()
 
+  const test = useRequestData().data
+
   useEffect(() => {
     makeRequest('http://localhost:5333/testimonial')
   }, [])
@@ -22,7 +24,15 @@ const VoresKunder = () => {
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: false,
-      gap: 10
+      gap: 10,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     };
 
   return (

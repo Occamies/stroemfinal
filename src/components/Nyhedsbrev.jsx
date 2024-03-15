@@ -29,7 +29,7 @@ const Nyhedsbrev = () => {
       {isLoading && <Loader />}
       {error && <Error />}
       <form name='addNewsletter' onSubmit={handleSubmit} className='newsletterForm'>
-        <input type="email" name="email" id="mail" placeholder='Din Email' />
+        <input type="email" name="email" id="mail" placeholder='Din Email' required/>
         <button type='submit' className='btn'>Tilmeld</button>
 
       </form>

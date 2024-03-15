@@ -8,6 +8,9 @@ import AdminLayout from './layout/admin/AdminLayout';
 import AdminNews from './views/admin/AdminNews';
 import AdminCreate from './views/admin/AdminCreate';
 import AdminEdit from './views/admin/AdminEdit';
+import NewsSubpage from './views/NewsSubpage';
+import NewsPage from './views/NewsPage';
+import SearchFile from './layout/SearchFile';
 
 
 
@@ -19,6 +22,9 @@ function App() {
       {/* PUBLIC */}
       <Route path='/' element={<Layout/>}>
         <Route index element={<FrontPage/>} />
+        <Route path='/News/NewsSubpage/:ID' element={<NewsSubpage/>} />
+        <Route path='/News/Search/:ID' element={<SearchFile/>} />
+        <Route path='/News' element={<NewsPage/>} />
         <Route path='*' element={<NotFound/>} />
       </Route>
 

@@ -2,6 +2,7 @@ import Error from '../components/Error';
 import Loader from "../components/Loader"
 import React, { useEffect } from "react"
 import useRequestData from "../hooks/useRequestData"
+import '../Fonts/_flaticon.scss'
 
 
 
@@ -27,7 +28,7 @@ const VoresService = () => {
           {data &&
             data.map((item, index) => (
               <div className="showservice-card">
-                <div></div>
+                <i className={item.icon + ' fi service-icon'}  ></i>
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.teaser}</p>
